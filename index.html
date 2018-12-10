@@ -1,6 +1,7 @@
 <!DOCTYLE HTML>
 <html>
     <head>
+        
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
         <title>QRCode Scanner</title>
@@ -30,18 +31,23 @@
                 var Id = getUrlParameter('Id');
                 var Username = getUrlParameter('Username');
                 var Password = getUrlParameter('Password');
-                var Redeem = getUrlParameter('Redeem');
+                var CategoryName = getUrlParameter('CategoryName');
+                var CategoryNameText = getUrlParameter('CategoryNameText');
+                var OtherInformationName = getUrlParameter('OtherInformationName');
+                var OtherInformationNameText = getUrlParameter('OtherInformationNameText'); 
+                var OtherInformationType = getUrlParameter('OtherInformationType');
                 
-                $(".title").text("Redeem");
+                $(".title").text(CategoryNameText + " - " + OtherInformationNameText);
                 
                 $('.scans').eq(0).bind("DOMSubtreeModified",function(){
-                    window.location.href = $('.scanContent').html()+"&&+"&&Username="+Username+"&&Password="+Password&&Redeem=True";
+                    window.location.href = $('.scanContent').html()+"&&SpreadSheetColumnId="+Id+"&&CategoryName="+CategoryName+"&&CategoryNameText="+CategoryNameText+"&&OtherInformationName="+OtherInformationName+"&&OtherInformationNameText="+OtherInformationNameText+"&&OtherInformationType="+OtherInformationType+"&&Username="+Username+"&&Password="+Password;
                 });
                 
                 var backBtn = document.getElementsByClassName("backBtnContainer")[0];
 
                 backBtn.onclick = function() {
-                    window.location.href = "http://localhost/seg_oh/admin/organizerSelection.php?Id=" + Id + "&&Username=" + Username + "&&Password=" + Password;
+                    //window.location.href = "https://www.hjjangela.com/EventDat/admin/organizerSelection.php?Id=" + Id + "&&Username=" + Username + "&&Password=" + Password;
+					 window.location.href = "http://localhost/seg_oh/admin/organizerSelection.php?Id=" + Id + "&&Username=" + Username + "&&Password=" + Password;
                 }
             });
         </script>
