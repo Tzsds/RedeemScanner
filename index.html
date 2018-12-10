@@ -31,12 +31,17 @@
                 var Id = getUrlParameter('Id');
                 var Username = getUrlParameter('Username');
                 var Password = getUrlParameter('Password');
+                var CategoryName = getUrlParameter('CategoryName');
+                var CategoryNameText = getUrlParameter('CategoryNameText');
+                var OtherInformationName = getUrlParameter('OtherInformationName');
+                var OtherInformationNameText = getUrlParameter('OtherInformationNameText'); 
+                var OtherInformationType = getUrlParameter('OtherInformationType');
                 var Redeem = getUrlParameter('Redeem');
                 
-                $(".title").text(CategoryNameText + " - " + OtherInformationNameText);
+                $(".title").text(Redeem);
                 
                 $('.scans').eq(0).bind("DOMSubtreeModified",function(){
-                    window.location.href = $('.scanContent').html()+"&&Username="+Username+"&&Password="+Password+"&&Redeem="+Redeem;
+                    window.location.href = $('.scanContent').html()+"&&Id="+Id+"&&Username="+Username+"&&Password="+Password+"&&Redeem="+Redeem;
                 });
                 
                 var backBtn = document.getElementsByClassName("backBtnContainer")[0];
