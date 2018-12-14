@@ -38,14 +38,13 @@
                 var OtherInformationType = getUrlParameter('OtherInformationType');
                 var Redeem = getUrlParameter('Redeem');
                 
-                $(".title").text(Redeem);
+                $(".title").text("Redemption");
                 
                 $('.scans').eq(0).bind("DOMSubtreeModified",function(){
                     window.location.href = $('.scanContent').html()+"&&Id="+Id+"&&Username="+Username+"&&Password="+Password+"&&Redeem="+Redeem;
                 });
                 
                 var backBtn = document.getElementsByClassName("backBtnContainer")[0];
-
                 backBtn.onclick = function() {
                     //window.location.href = "https://www.hjjangela.com/EventDat/admin/organizerSelection.php?Id=" + Id + "&&Username=" + Username + "&&Password=" + Password;
 					 window.location.href = "http://172.16.218.180/seg_oh/admin/organizerSelection.php?Id=" + Id + "&&Username=" + Username + "&&Password=" + Password;
@@ -58,10 +57,8 @@
                     sURLVariables = sPageURL.split('&'),
                     sParameterName,
                     i;
-
                 for (i = 0; i < sURLVariables.length; i++) {
                     sParameterName = sURLVariables[i].split('=');
-
                     if (sParameterName[0] === sParam) {
                         return sParameterName[1] === undefined ? true : sParameterName[1];
                     }
