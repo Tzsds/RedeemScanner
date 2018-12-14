@@ -25,7 +25,7 @@
         </div>
         <div class="backBtnContainer"><button class="buttons">Back</button></div>
         <script type="text/javascript" src="js/app.js"></script>
-        <script>
+        <script type="text/javascript">
             $(document).ready(() => {
                 
                 var Id = getUrlParameter('Id');
@@ -50,8 +50,6 @@
 					 window.location.href = "http://172.16.218.180/seg_oh/admin/organizerSelection.php?Id=" + Id + "&&Username=" + Username + "&&Password=" + Password;
                 }
             });
-        </script>
-        <script>
             var getUrlParameter = function getUrlParameter(sParam) {
                 var sPageURL = decodeURIComponent(window.location.search.substring(1)),
                     sURLVariables = sPageURL.split('&'),
@@ -64,8 +62,6 @@
                     }
                 }
             };
-        </script>
-        <script>
             document.getElementById("preview").style.cssText = "-moz-transform: scale(1, 1); \ -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); \ transform: scale(1, 1); filter: FlipH;";
         </script>
     </body>
