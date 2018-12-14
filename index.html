@@ -37,11 +37,12 @@
                 var OtherInformationNameText = getUrlParameter('OtherInformationNameText'); 
                 var OtherInformationType = getUrlParameter('OtherInformationType');
                 var Redeem = getUrlParameter('Redeem');
+                var MaxPoint = getUrlParameter('maxPoint');
                 
                 $(".title").text("Redemption");
                 
                 $('.scans').eq(0).bind("DOMSubtreeModified",function(){
-                    window.location.href = $('.scanContent').html()+"&&Id="+Id+"&&Username="+Username+"&&Password="+Password+"&&Redeem="+Redeem;
+                    window.location.href = $('.scanContent').html()+"&&Id="+Id+"&&Username="+Username+"&&Password="+Password+"&&Redeem="+Redeem+"&&maxPoint="+MaxPoint;
                 });
                 
                 var backBtn = document.getElementsByClassName("backBtnContainer")[0];
